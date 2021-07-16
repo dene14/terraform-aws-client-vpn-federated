@@ -75,7 +75,7 @@ resource "aws_ec2_client_vpn_authorization_rule" "rules" {
   count = length(var.authorization_rules)
 
   access_group_id        = var.authorization_rules[count.index].access_group_id
-  authorize_all_groups   = var.authorization_rules[count.index].authorize_all_groups
+  #authorize_all_groups   = var.authorization_rules[count.index].authorize_all_groups
   client_vpn_endpoint_id = aws_ec2_client_vpn_endpoint.this.id
   description            = var.authorization_rules[count.index].description
   target_network_cidr    = var.authorization_rules[count.index].target_network_cidr
