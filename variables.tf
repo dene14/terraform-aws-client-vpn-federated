@@ -24,7 +24,7 @@ variable "authorization_rules" {
   type = list(object({
     name                 = string
     access_group_id      = string
-    authorize_all_groups = bool
+#    authorize_all_groups = bool
     description          = string
     target_network_cidr  = string
   }))
